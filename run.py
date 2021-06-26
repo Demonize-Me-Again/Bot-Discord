@@ -11,7 +11,7 @@ if platform.lower() == 'windows':
 intents = Intents.default()
 intents.members = True
 
-bot = Demonize(intents=intents, command_prefix='d.', help_command=None, activity=Game('Starting...'))
+bot = Demonize(intents=intents, command_prefix='d.', activity=Game('Starting...'))
 
 loop = asyncio.get_event_loop()
 task_bot = loop.create_task(bot.run(environ['TOKEN_BOT']))
